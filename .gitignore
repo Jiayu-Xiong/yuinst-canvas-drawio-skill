@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*.zip
+*.drawio.bkp
+*.drawio.dtmp
+.$*.drawio.bkp
+.$*.drawio.dtmp
+.DS_Store
+Thumbs.db

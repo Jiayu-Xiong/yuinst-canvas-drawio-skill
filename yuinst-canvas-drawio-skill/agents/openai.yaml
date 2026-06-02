@@ -1,0 +1,4 @@
+interface:
+  display_name: "YuInst Canvas Draw.io Skill"
+  short_description: "Create editable draw.io figures from gridded flowchart blocks."
+  default_prompt: "Use $yuinst-canvas-drawio-skill to turn this figure prompt into a gridded draw.io workflow with polished SVG tiles."

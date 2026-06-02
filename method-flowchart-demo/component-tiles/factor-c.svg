@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="40" viewBox="0 0 110 40">
+
+  <defs>
+    <pattern id="stripe_C" patternUnits="userSpaceOnUse" width="10" height="10">
+      <rect width="10" height="10" fill="#f46d4d" fill-opacity="0.08"/>
+      <path d="M-4,10 L10,-4 M0,14 L14,0 M6,16 L16,6"
+            stroke="#f46d4d" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+    </pattern>
+
+    <pattern id="dots_C" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#f46d4d" fill-opacity="0.05"/>
+      <circle cx="2" cy="2" r="0.9" fill="#f46d4d" opacity="0.9"/>
+    </pattern>
+  </defs>
+
+  <clipPath id="clip_stage2_C">
+    <rect x="0" y="0" width="110" height="40" rx="8"/>
+  </clipPath>
+
+  <g clip-path="url(#clip_stage2_C)">
+    <rect x="0" y="0" width="55" height="40" fill="url(#stripe_C)"/>
+    <rect x="55" y="0" width="55" height="40" fill="url(#dots_C)"/>
+    <line x1="55" y1="0" x2="55" y2="40"
+          stroke="#f46d4d" stroke-width="1.2" opacity="0.7"/>
+  </g>
+
+  <rect x="0" y="0" width="110" height="40" rx="8"
+        fill="none" stroke="#f46d4d" stroke-width="1.6"/>
+</svg>

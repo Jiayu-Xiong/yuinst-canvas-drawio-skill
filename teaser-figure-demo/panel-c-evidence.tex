@@ -1,0 +1,43 @@
+\begin{table}[h]
+\centering
+\caption{Impact of Fusion Strategies on Feature Extractor Degradation (FakeAVCeleb). Row 0 shows the absolute performance of standalone unimodal training. Subsequent rows show the performance gap (\textbf{REMOVE} fusion, linear probing $\Delta$ of extractor's representation, lower decline is better). Negative values indicate that the joint training process damaged the feature extractor's specific representational power. \textbf{Bold} indicates the minimum degradation.}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{l|cc|cc}
+\toprule
+\multirow{2}{*}{\textbf{Method}} & \multicolumn{2}{c|}{\textbf{Accuracy (ACC) \%}} & \multicolumn{2}{c}{\textbf{ROC-AUC \%}} \\
+& Audio ($\Delta$) & Visual ($\Delta$) & Audio ($\Delta$) & Visual ($\Delta$) \\
+\midrule
+\multicolumn{5}{l}{\textit{\textbf{VideoMAE V2-Small~\citep{wang2023videomae} + WavLM-Base~\citep{chen2022wavlm}}}} \\
+\midrule
+0. Standalone Unimodal Baseline & 99.24 & 98.15 & 99.58 & 96.77 \\
+\midrule
+1. Cross-Attention (4-Layers) & -0.42 & -7.54 & -0.28 & -10.08 \\
+2. Mutual Information Min. & -0.85 & -3.10 & -0.61 & -3.92 \\
+3. Contrastive Constraints & -1.12 & -2.63 & -0.74 & -2.80 \\
+4. \textbf{SCFAE (Ours)} & \textbf{-0.08} & \textbf{-0.88} & \textbf{-0.04} & \textbf{-0.83} \\
+\midrule
+\midrule
+\multicolumn{5}{l}{\textit{\textbf{DINOv3 (ViT-S)~\citep{simeoni2025dinov3} + AudioMAE~\citep{huang2022masked}}}} \\
+\midrule
+0. Standalone Unimodal Baseline & 98.17 & 99.35 & 98.19 & 97.45 \\
+\midrule
+1. Cross-Attention (4-Layers) & -0.97 & -6.35 & -1.49 & -7.86 \\
+2. Mutual Information Min. & -1.33 & -3.37 & -1.88 & -2.89 \\
+3. Contrastive Constraints & -1.75 & -2.98 & -2.10 & -1.98 \\
+4. \textbf{SCFAE (Ours)} & \textbf{-0.53} & \textbf{-1.57} & \textbf{-1.22} & \textbf{-0.26} \\
+\midrule
+\midrule
+\multicolumn{5}{l}{\textit{\textbf{R(2+1)D-18~\citep{R2+1D} + ResNetSE-34~\citep{ResNet}} (End-to-End CNNs)}} \\
+\midrule
+0. Standalone Unimodal Baseline & 94.82 & 95.35 & 96.43 & 88.67 \\
+\midrule
+1. Cross-Attention (4-Layers) & -2.45 & -9.79 & -1.87 & -12.45 \\
+2. Mutual Information Min. & -3.12 & -5.14 & -2.54 & -6.12 \\
+3. Contrastive Constraints & -3.87 & -4.39 & -3.12 & -5.43 \\
+4. \textbf{SCFAE (Ours)} & \textbf{-0.44} & \textbf{-1.33} & \textbf{-0.31} & \textbf{-0.72} \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:backbone_degradation}
+\vskip -2em
+\end{table}

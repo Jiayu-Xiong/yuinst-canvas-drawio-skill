@@ -143,3 +143,7 @@ Open `.drawio` files with diagrams.net or draw.io-compatible tooling.
 - Keep tile outputs bounded and margin-free.
 - Do not depend on `ref.png` as the final artifact.
 - Prefer deterministic composer scripts over hand-positioned layouts.
+
+## Acknowledgement
+
+The author Jiayu Xiong would like to thanks his advisors Jing Wang, Qi Zhang, and his grandmother Xiaomao Wang.
